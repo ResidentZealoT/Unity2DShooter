@@ -1,0 +1,152 @@
+fileFormatVersion: 2
+guid: 7b3c77da83765cb47892182c7787c512
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: sEnemy3_0
+    21300002: sEnemy3_1
+    21300004: sEnemy3_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -2
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 0
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
+  spriteSheet:
+    sprites:
+    - name: sEnemy3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 160
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 33, y: -16}
+        - {x: 42, y: -11}
+        - {x: 28, y: -22}
+        - {x: 27, y: -25}
+        - {x: 21, y: -51}
+        - {x: 71, y: -51}
+        - {x: 80, y: -49}
+        - {x: 80, y: 51}
+        - {x: -80, y: 51}
+        - {x: -80, y: -28}
+        - {x: -57, y: -51}
+        - {x: -13, y: -51}
+        - {x: 22, y: -37}
+        - {x: 23, y: -27}
+        - {x: 30, y: -20}
+    - name: sEnemy3_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 160
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: -28}
+        - {x: -18, y: -31}
+        - {x: -4, y: -35}
+        - {x: 9, y: -34}
+        - {x: 23, y: -28}
+        - {x: 31, y: -19}
+        - {x: 34, y: -14}
+        - {x: 43, y: -10}
+        - {x: 30, y: -20}
+        - {x: 28, y: -23}
+        - {x: 27, y: -26}
+        - {x: 21, y: -51}
+        - {x: 52, y: -51}
+        - {x: 72, y: -36}
+        - {x: 80, y: -22}
+        - {x: 80, y: 28}
+        - {x: 63, y: 51}
+        - {x: -67, y: 51}
+        - {x: -80, y: 30}
+        - {x: -80, y: -17}
+        - {x: -70, y: -41}
+        - {x: -56, y: -51}
+        - {x: -25, y: -51}
+        - {x: -20, y: -49}
+        - {x: -26, y: -29}
+        - {x: -28, y: -24}
+        - {x: -32, y: -20}
+    - name: sEnemy3_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 160
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -59, y: 51}
+        - {x: -80, y: 29}
+        - {x: -80, y: -38}
+        - {x: -37, y: -46}
+        - {x: -30, y: -27}
+        - {x: -31, y: -22}
+        - {x: -36, y: -18}
+        - {x: -36, y: -17}
+        - {x: -23, y: -29}
+        - {x: -17, y: -34}
+        - {x: 7, y: -47}
+        - {x: 19, y: -51}
+        - {x: 80, y: -51}
+        - {x: 80, y: 51}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
