@@ -11,11 +11,7 @@ public class EnemySpawner : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		Invoke ("SpawnEnemy", SpawnRate);
 
-		InvokeRepeating ("IncreaseDifficulty", 0f, 30f);
-
-	
 	}
 	
 	// Update is called once per frame
@@ -53,6 +49,21 @@ public class EnemySpawner : MonoBehaviour
 		if (SpawnRate == 1f)
 			CancelInvoke ("IncreaseDifficulty");
 			
+	}
+
+	public void ScheduleEnemySpawner()
+	{
+		Invoke ("SpawnEnemy", SpawnRate);
+
+		InvokeRepeating ("IncreaseDifficulty", 0f, 30f);
+
+			
+	}
+
+	public void UnscheduleEnemySpawner()
+	{
+		CancelInvoke ("SpawnEnemy");
+		CancelInvoke ("IncreaseDifficulty");
 	}
 
 }
