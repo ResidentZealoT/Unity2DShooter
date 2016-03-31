@@ -10,22 +10,27 @@ public class PlayerControl : MonoBehaviour {
 	public GameObject BulletPos01;
 	public GameObject BulletPos02;
 	public GameObject ExplosionGO;
+	public AudioClip shootSound;
 
 	public Text LivesUIText;
 
 	const int MaxLives = 3;
 	int lives;
 
+	private AudioSource source;
+
 	public void Init()
 	{
 		lives = MaxLives;
 		LivesUIText.text = lives.ToString ();
+		transform.position = new Vector2 (0, 0);
 		gameObject.SetActive (true);
+		source = GetComponent<AudioSource> ();
 	}
 
 	// Use this for initialization
 	void Start () {
-	
+		source = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -33,6 +38,8 @@ public class PlayerControl : MonoBehaviour {
 	{
 		if (Input.GetKeyDown ("space")) 
 		{
+			source.PlayOneShot (shootSound, 1f);
+
 			GameObject bullet01 = (GameObject)Instantiate (Player1BulletGO);
 			bullet01.transform.position = BulletPos01.transform.position;
 

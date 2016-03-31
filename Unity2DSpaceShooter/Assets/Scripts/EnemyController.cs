@@ -3,12 +3,13 @@ using System.Collections;
 
 public class EnemyController : MonoBehaviour {
 
+	GameObject scoreUITextGO;
 	public GameObject ExplosionGO;
 	public float speed;
 	// Use this for initialization
 	void Start () 
 	{
-	
+		scoreUITextGO = GameObject.FindGameObjectWithTag ("ScoreTextTag");
 	}
 	
 	// Update is called once per frame
@@ -33,6 +34,8 @@ public class EnemyController : MonoBehaviour {
 		if((col.tag == "PlayerShipTag") || (col.tag == "PlayerBulletTag"))
 		{
 			PlayExplosion ();
+
+			scoreUITextGO.GetComponent<GameScore> ().Score += 100;
 			Destroy (gameObject);
 		}
 	}
