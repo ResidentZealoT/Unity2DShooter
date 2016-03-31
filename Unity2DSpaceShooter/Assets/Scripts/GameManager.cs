@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour {
 
 	public GameObject playButton;
 	public GameObject playerShip;
+	public GameObject player2Ship;
 	public GameObject enemySpawner;
 	public GameObject GameOverGO;
 	public GameObject scoreUITextGO;
@@ -35,10 +36,12 @@ public class GameManager : MonoBehaviour {
 			scoreUITextGO.GetComponent<GameScore> ().Score = 0;
 			playButton.SetActive (false);
 			playerShip.GetComponent<PlayerControl> ().Init ();
+			player2Ship.GetComponent<Player2Control> ().Init ();
 			enemySpawner.GetComponent<EnemySpawner> ().ScheduleEnemySpawner ();
 			break;
 		case GameManagerState.GameOver:
 			GameOverGO.SetActive (true);
+			player2Ship.GetComponent<Player2Control> ().End ();
 			enemySpawner.GetComponent<EnemySpawner> ().UnscheduleEnemySpawner ();
 			Invoke ("ChangeToOpeningState", 8f); 
 
