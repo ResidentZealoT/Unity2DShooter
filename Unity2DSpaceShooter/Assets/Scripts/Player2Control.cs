@@ -5,6 +5,7 @@ public class Player2Control : MonoBehaviour {
 
 	public GameObject GameManagerGO;
 	GameObject scoreUITextGO;
+	public PlayerControl other;
 	public float speed;
 	public float count;
 	// Use this for initialization
@@ -43,11 +44,13 @@ public class Player2Control : MonoBehaviour {
 
 	}
 		
+	// on collision provide lives to player1
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if((col.tag == "EnemyShipTag") || (col.tag == "EnemyBulletTag"))
+		if(col.tag == "EnemyShipTag")
 		{
-			scoreUITextGO.GetComponent<GameScore> ().Score += 150;
+			other.lives++;
+			other.LivesUIText.text = other.lives.ToString ();
 			count++;
 		}
 	}

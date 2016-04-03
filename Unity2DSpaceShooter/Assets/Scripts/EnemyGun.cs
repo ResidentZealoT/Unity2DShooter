@@ -16,6 +16,7 @@ public class EnemyGun : MonoBehaviour {
 	
 	}
 
+	// shoots at player1
 	void Fire()
 	{
 		GameObject playerShip = GameObject.Find ("Player1GO");

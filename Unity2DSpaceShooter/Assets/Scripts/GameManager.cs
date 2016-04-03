@@ -24,7 +24,9 @@ public class GameManager : MonoBehaviour {
 	
 		GMState = GameManagerState.Opening;
 	}
-	
+
+	// controls the states of the game Opening Gameplay and Gameover, activates players and reloads
+	// also starts stops enemy scheduler
 	void UpdateGameManagerState()
 	{
 		switch (GMState) {

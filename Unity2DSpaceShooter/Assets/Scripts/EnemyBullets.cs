@@ -9,7 +9,7 @@ public class EnemyBullets : MonoBehaviour {
 	// Use this for initialization
 	void Awake()
 	{
-		speed = 5f;
+		speed = 3.5f;
 		isReady = false;
 		
 	}
@@ -19,6 +19,7 @@ public class EnemyBullets : MonoBehaviour {
 	
 	}
 
+	// moves towards player 1
 	public void SetDirection(Vector2 direction)
 	{
 		_direction = direction.normalized;

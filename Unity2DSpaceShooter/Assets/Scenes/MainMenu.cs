@@ -6,6 +6,7 @@ public class MainMenu : MonoBehaviour {
 
 	public GameObject playButton;
 
+	// chanmge to game screen
 	public void LoadScene()
 	{
 		SceneManager.LoadScene ("GameEngine");

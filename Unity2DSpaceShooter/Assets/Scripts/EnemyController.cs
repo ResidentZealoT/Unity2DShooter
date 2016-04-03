@@ -29,6 +29,7 @@ public class EnemyController : MonoBehaviour {
 		}
 	}
 
+	// destroy enemies and increase score
 	void OnTriggerEnter2D(Collider2D col)
 	{
 		if((col.tag == "PlayerShipTag") || (col.tag == "PlayerBulletTag"))

@@ -15,10 +15,11 @@ public class PlayerControl : MonoBehaviour {
 	public Text LivesUIText;
 
 	const int MaxLives = 3;
-	int lives;
+	public int lives;
 
 	private AudioSource source;
 
+	// on object initiation setup
 	public void Init()
 	{
 		lives = MaxLives;
@@ -36,6 +37,7 @@ public class PlayerControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		// control key inputs for shooting and movements
 		if (Input.GetKeyDown ("space")) 
 		{
 			source.PlayOneShot (shootSound, 1f);
@@ -54,6 +56,7 @@ public class PlayerControl : MonoBehaviour {
 		Move (direction);
 	}
 
+	// Move the player, and keep within frame
 	void Move(Vector2 direction)
 	{
 		Vector2 min = Camera.main.ViewportToWorldPoint (new Vector2 (0, 0));
@@ -74,6 +77,7 @@ public class PlayerControl : MonoBehaviour {
 		transform.position = pos;
 	}
 
+	// collisions
 	void OnTriggerEnter2D(Collider2D col)
 	{
 		if((col.tag == "EnemyShipTag") || (col.tag == "EnemyBulletTag"))
@@ -90,9 +94,15 @@ public class PlayerControl : MonoBehaviour {
 		}
 	}
 
+	// explosion prefab on hit
 	void PlayExplosion()
 	{
 		GameObject explosion = (GameObject)Instantiate (ExplosionGO);
 		explosion.transform.position = transform.position;
+	}
+
+	public void IncreaseLives()
+	{
+		lives++;
 	}
 }

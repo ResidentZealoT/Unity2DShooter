@@ -6,19 +6,10 @@ public class EnemySpawner : MonoBehaviour
 
 	public GameObject EnemyGO;
 
-	float SpawnRate = 5f;
+	// how fast the enemies spawn
+	float SpawnRate = 0.5f;
 
-	// Use this for initialization
-	void Start ()
-	{
-
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-	
-	}
+	// randomly spawns enemy at the top of the screen
 	void SpawnEnemy ()
 	{
 		Vector2 min = Camera.main.ViewportToWorldPoint (new Vector2 (0, 0));
@@ -30,23 +21,25 @@ public class EnemySpawner : MonoBehaviour
 		ScheduleSpawn ();
 	}
 
+	// handles the next spawn when timer reached
 	void ScheduleSpawn()
 	{
 		float spawn;
 
-		if (SpawnRate > 1f) {
-			spawn = Random.Range (1f, SpawnRate);
+		if (SpawnRate > 0.5f) {
+			spawn = Random.Range (0.5f, SpawnRate);
 		} else
-			spawn = 1f;
+			spawn = 0.5f;
 
 		Invoke ("SpawnEnemy", spawn);
 	}
 
+	// increases spawn rate
 	void IncreaseDIfficulty()
 	{
-		if (SpawnRate > 1f)
+		if (SpawnRate > 0.5f)
 			SpawnRate--;
-		if (SpawnRate == 1f)
+		if (SpawnRate == 0.5f)
 			CancelInvoke ("IncreaseDifficulty");
 			
 	}
